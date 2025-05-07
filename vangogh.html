@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vincent van Gogh - Galería Virtual</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script>
+    function mostrarSeccion(id) {
+      document.querySelectorAll("main section").forEach(sec => sec.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    window.onload = () => mostrarSeccion("bio");
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1 align="center">Vincent van Gogh</h1>
+    <nav>
+      <button onclick="mostrarSeccion('bio')">Biografía</button>
+      <button onclick="mostrarSeccion('obras')">Obras Famosas</button>
+      <button onclick="mostrarSeccion('galeria')">Galería</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="bio">
+      <h2>Biografía</h2>
+      <div class="bio-contenido">
+        <div class="fotos-bio">
+          <img src="imagenes/vangogh.jpg" alt="Van Gogh 1">
+          <img src="imagenes/vangogh2.jpg" alt="Van Gogh 2">
+          <img src="imagenes/vangogh3.jpg" alt="Van Gogh 3">
+        </div>
+        <div class="texto-bio">
+          <p>
+            Vincent van Gogh nació en 1853 en los Países Bajos. Considerado uno de los más grandes pintores de todos los tiempos, su vida estuvo marcada por luchas internas, pobreza y enfermedad mental.
+          </p>
+          <p>
+            Se dedicó al arte a los 27 años, influenciado por el impresionismo y el arte japonés. Sus obras reflejan emociones intensas y el uso de colores vibrantes, pinceladas gruesas y movimientos turbulentos.
+          </p>
+          <p>
+            Vivió sus últimos años en Francia, donde pintó más de 2,000 obras, incluyendo sus famosas series de girasoles y paisajes nocturnos. Falleció en 1890 a los 37 años.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="obras">
+      <h2>Obras Famosas</h2>
+      <div class="galeria-obras">
+        <div class="obra">
+          <img src="imagenes/noche_estrellada.jpg" alt="La noche estrellada">
+          <h3>La noche estrellada</h3>
+          <a href="https://www.moma.org/collection/works/79802" target="_blank">Ver en MoMA</a>
+        </div>
+        <div class="obra">
+          <img src="imagenes/girasoles.jpg" alt="Girasoles">
+          <h3>Los girasoles</h3>
+          <a href="https://www.nationalgallery.org.uk/paintings/vincent-van-gogh-sunflowers" target="_blank">Ver en National Gallery</a>
+        </div>
+        <div class="obra">
+          <img src="imagenes/dormitorio.jpg" alt="Dormitorio en Arlés">
+          <h3>Dormitorio en Arlés</h3>
+          <a href="https://www.artic.edu/artworks/28560/the-bedroom" target="_blank">Ver en Art Institute</a>
+        </div>
+        <div class="obra">
+          <img src="imagenes/autorretrato.jpg" alt="Autorretrato">
+          <h3>Autorretrato</h3>
+          <a href="https://www.musee-orsay.fr/en/artworks/self-portrait-943" target="_blank">Ver en Musée d'Orsay</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2>Galería de Imágenes</h2>
+      <div class="galeria-imagenes">
+        <img src="imagenes/noche_estrellada.jpg" alt="Noche Estrellada">
+        <img src="imagenes/girasoles.jpg" alt="Girasoles">
+        <img src="imagenes/dormitorio.jpg" alt="Dormitorio">
+        <img src="imagenes/autorretrato.jpg" alt="Autorretrato">
+      </div>
+    </section>
+   
+  </main>
+
+</body>
+</html>
